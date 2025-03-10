@@ -15,6 +15,8 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
+//This program must be compiled with the "-lreadline" flag...
+
 // Function to strn cmp and check wether EOF is entered or not
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
