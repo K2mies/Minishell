@@ -36,6 +36,25 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
+// Function to check for character inside of string
+char	*ft_strrchr(const char *s, int c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	while (i > 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
+	}
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
+	return (NULL);
+}
+
 // Function to print the history of readline
 void	print_history()
 {
@@ -67,9 +86,14 @@ int	main()
 		}
 		printf("you shouted: %s into the void\n", input);
 		add_history(input);
-		free(input);
+//		free(input);
 		printf("the void shouts back the following:\n");
 		print_history();
+		if (ft_strrchr(input, '<'))
+		{
+			printf("%s includes a '<' character\n", input);
+		}
+		free(input);
 	}
 	return (0);
 }
