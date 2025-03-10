@@ -50,7 +50,7 @@ void	print_history()
 
 int	main()
 {
-	printf("Welcome weary traveller! You can safeoword by pressing Ctrl+C at any time...\n");
+	printf("Welcome weary traveller! You can safeoword by pressing Ctrl+D at any time...\n");
 	char	*input;
 	while (1)
 	{
@@ -59,7 +59,7 @@ int	main()
 			return (1);
 		if (ft_strncmp(input, "exit", 4) == 0)
 		{
-			printf("exiting program\n");
+			printf("exiting program...\n");
 			free(input);
 			break ;
 		}
@@ -68,15 +68,6 @@ int	main()
 		free(input);
 		printf("the void shouts back the following:\n");
 		print_history();
-		printf( "stncmp out: %d\n", ft_strncmp(input, "out", 3));
-//		if (ft_strncmp(input, "out", 3) == 0)
-//		{
-//			printf("exiting program\n");
-//			free(input);
-//			break ;
-//		}
-//		free(input);
-
 	}
 	return (0);
 }
