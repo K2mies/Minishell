@@ -1,0 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   getenv00.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/11 11:31:46 by rhvidste          #+#    #+#             */
+/*   Updated: 2025/03/11 11:59:34 by rhvidste         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+# include <stdio.h>
+# include <stdlib.h>
+
+int	main(int argc, char **argv) 
+{
+	char * env_variable = getenv("PATH");
+	printf("The value of our enviroment variable is %s\n\n", env_variable);
+	return (0);
+}
